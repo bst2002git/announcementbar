@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <announcement_bar>
+            <general>
+                <enable>0</enable>
+                <announcement_text>Free Shipping Sample Text</announcement_text>
+                <text_position>header</text_position>
+                <text_font_size>14</text_font_size>
+                <text_color>#f60404</text_color>
+                <text_background_color>#f6f604</text_background_color>
+            </general>
+        </announcement_bar>
+    </default>
+</config>

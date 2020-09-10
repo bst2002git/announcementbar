@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="commersys" translate="label" sortOrder="10">
+            <label><![CDATA[<img src="https://www.commersys.com/wp-content/uploads/company_logo/logo.png" alt="Commersys" height="25" style="vertical-align:middle;"/>]]></label>
+        </tab>
+        <section id="announcement_bar" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Announcement Bar</label>
+            <tab>commersys</tab>
+            <resource>Commersys_AnnouncementBar::announcement_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>General Configuration</label>
+                <field id="enable" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Module Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="announcement_text" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Announcement Text</label>
+                    <comment>This text will display on the frontend.</comment>
+                </field>
+                <field id="text_position" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Position</label>
+                    <source_model>Commersys\AnnouncementBar\Block\Adminhtml\System\Config\Form\Field\TextPosition</source_model>
+                </field>
+                <field id="text_font_size" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Font Size</label>
+                    <source_model>Commersys\AnnouncementBar\Block\Adminhtml\System\Config\Form\Field\FontSize</source_model>
+                </field>
+                <field id="text_font_family" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Font Family</label>
+                    <source_model>Commersys\AnnouncementBar\Block\Adminhtml\System\Config\Form\Field\FontFamily</source_model>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Color</label>
+                    <frontend_model>Commersys\AnnouncementBar\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+                </field>
+                <field id="text_background_color" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Background Color</label>
+                    <frontend_model>Commersys\AnnouncementBar\Block\Adminhtml\System\Config\Form\Field\Color</frontend_model>
+                </field>
+                <field id="text_colorpickers_trigger" translate="label" sortOrder="100" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label></label>
+                    <frontend_model>Commersys\AnnouncementBar\Block\Adminhtml\System\Config\Form\Field\ColorConfig</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
